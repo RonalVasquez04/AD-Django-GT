@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styleTareasList.css' %}">
+  <div class="content">
+    <h1>Lista de tareas</h1>
+
+    {% if tarea_list %}
+      <ul class="task-list">
+        {% for tarea in tarea_list %}
+          <li class="task-item">
+            <a class="task-link" href="{{ tarea.get_absolute_url }}">{{ tarea.titulo }} ({{tarea.descripcion}})</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No hay tareas.</p>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styleEstudianteList.css' %}">
+  <div class="content">
+    <h1>Lista de estudiantes</h1>
+
+    {% if estudiante_list %}
+      <ul class="student-list">
+        {% for estudiante in estudiante_list %}
+          <li class="student-item">
+            <a class="student-link" href="{{ estudiante.get_student_absolute_url }}">{{ estudiante.firstName }} {{estudiante.lastName}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No hay estudiantes.</p>
+    {% endif %}
+  </div>
+{% endblock %}

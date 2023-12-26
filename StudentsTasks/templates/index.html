@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styleIndex.css' %}">
+  <div class="content-container">
+    <header>
+      <h1 class="main-heading">Gestió de Dades Estudiants</h1>
+      <p class="sub-heading">
+        Information about student data and assignments and courses
+      </p>
+    </header>
+
+    <section class="dynamic-content">
+      <h2 class="section-heading">Dynamic Content</h2>
+
+      <div class="data-summary">
+        <p class="summary-heading">Data Summary:</p>
+        <ul class="summary-list">
+          <li><strong>Tasques:</strong> {{ num_tareas }}</li>
+          <li><strong>Estudiants:</strong> {{ num_alum }}</li>
+          <li><strong>Cursos:</strong> {{ num_cursos }}</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+{% endblock %}

@@ -1,0 +1,70 @@
+.toolbar {
+
+  padding: 10px;
+
+}
+
+.toolbar ul {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(10px, auto);
+}
+
+
+
+.toolbar a {
+
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.toolbar a:hover,
+.toolbar a.active {
+
+  color: #0b04c2;
+}
+
+.iniciadoSesion {
+  color: #c65e2d;
+  grid-column: 7;
+  justify-self: end;
+  align-items: end;
+
+}
+.iniciadoSesion1, .iniciadoSesion2 {
+  color: #582dc6;
+  grid-column: 6;
+    justify-self: end;
+
+}
+.one {
+  grid-column: 1;
+}
+.two {
+    grid-column: 2;
+}
+.three {
+    grid-column: 3;
+}
+.four {
+    grid-column: 4;
+}
+
+
+
+.toolbar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  list-style: none;
+}
+
+
+
+
+

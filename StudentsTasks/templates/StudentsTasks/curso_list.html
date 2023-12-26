@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styleCursoList.css' %}">
+  <div class="content">
+    <h1>Lista de cursos</h1>
+
+    {% if curso_list %}
+      <ul class="course-list">
+        {% for curso in curso_list %}
+          <li class="course-item">
+            <a class="course-link" href="{{ curso.get_absolute_url }}">{{ curso.name }} {{curso.descripcion}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No hay cursos.</p>
+    {% endif %}
+  </div>
+{% endblock %}

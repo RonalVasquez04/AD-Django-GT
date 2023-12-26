@@ -1,0 +1,58 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+  <div class="curso-detail-container">
+    <style>
+      /* styles.css */
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .curso-detail-container {
+          max-width: 800px;
+          margin: 50px auto;
+          padding: 20px;
+          background-color: #9fec10;
+          box-shadow: 0 0 10px rgba(10, 51, 198, 0.1);
+          border-radius: 10px;
+        }
+        
+        h1 {
+          color: black;
+        }
+        p {
+
+          color: black
+        }
+        
+        .curso-info {
+          margin-top: 20px;
+        }
+      
+        .curso-detail-container {
+          animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        
+    </style>
+    <h1>{{ curso.name }} {{ curso.descripcion }}</h1>
+
+    <div class="curso-info">
+      <p><strong>Curso :</strong> {{ curso.name }}  </p>
+      <p><strong>Descripción :</strong> {{ curso.description }}</p>
+    </div>
+  </div>
+{% endblock %}
+

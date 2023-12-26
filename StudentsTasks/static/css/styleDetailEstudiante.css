@@ -1,0 +1,37 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.student-detail-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #e50101;
+  box-shadow: 0 0 10px rgba(10, 51, 198, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  color: #e9e8f1;
+}
+
+.student-info {
+  margin-top: 20px;
+}
+
+.student-detail-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

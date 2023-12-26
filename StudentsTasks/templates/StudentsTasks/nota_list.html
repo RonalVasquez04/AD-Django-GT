@@ -1,0 +1,61 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load static %}
+<style>
+
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; 
+  }
+  
+  h1 {
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    color: #007BFF;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+  }
+  
+  .nota-list {
+    list-style: none;
+    
+    padding: 0;
+  }
+  
+  .nota-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  
+  p.no-notas {
+    color: #888;
+  }
+  
+</style>
+  <div class="content">
+    <h1>Mis notas</h1>
+
+    {% if notas %}
+      <ul class="nota-list">
+        {% for nota in notas %}
+          <li class="nota-item">
+            <p class="nota-link" >{{ nota.tarea }} ({{nota.curso}}) {{nota.nota}}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No hay notas.</p>
+    {% endif %}
+  </div>
+{% endblock %}
